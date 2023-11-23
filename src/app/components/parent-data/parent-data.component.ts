@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-parent-data',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './parent-data.component.html',
-  styleUrl: './parent-data.component.css'
+  styleUrls: ['./parent-data.component.css'],
 })
-export class ParentDataComponent {
+export class ParentDataComponent implements OnInit {
+  @Input() user!: { email: string; role: string };
+  @Input() name: string = '';
 
+  constructor() {}
+
+  ngOnInit(): void {}
 }
