@@ -9,6 +9,11 @@ export class FirstComponentComponent implements OnInit {
   name = 'Matheus';
   age = 30;
   job = 'Programmer';
+  hobbies = ['desenhar', 'escrever', 'Escrever'];
+  car = {
+    name: 'Ferrari 458',
+    year: '2011',
+  };
 
   constructor() {}
 
