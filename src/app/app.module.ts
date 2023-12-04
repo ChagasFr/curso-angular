@@ -11,7 +11,8 @@ import { EmitterComponent } from './components/emitter/emitter.component';
 import { ChangeNumberComponent } from './components/change-number/change-number.component';
 import { ListRenderComponent } from './components/list-render/list-render.component';
 import { PipesComponent } from './components/pipes/pipes.component';
-
+import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,8 +25,9 @@ import { PipesComponent } from './components/pipes/pipes.component';
     ChangeNumberComponent,
     ListRenderComponent,
     PipesComponent,
+    TwoWayBindingComponent,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
