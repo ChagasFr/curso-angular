@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Animal } from '../../Animal';
+import { Animal } from 'src/app/Animal';
 
-import { ListService } from '../../services/list.service';
+import { ListService } from 'src/app/services/list.service';
 
 @Component({
   selector: 'app-list-render',
@@ -25,7 +25,8 @@ export class ListRenderComponent implements OnInit {
   }
 
   removeAnimal(animal: Animal) {
-    this.animals = this.listService.remove(this.animals, animal);
+    this.animals = this.animals.filter((a) => animal !== a);
+    this.listService.remove(animal.id).subscribe();
   }
 
   getAnimals(): void {
