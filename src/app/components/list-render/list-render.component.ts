@@ -29,6 +29,6 @@ export class ListRenderComponent implements OnInit {
   }
 
   getAnimals(): void {
-    this.listService.getAll().subscribe;
+    this.listService.getAll().subscribe((animals) => (this.animals = animals));
   }
 }
